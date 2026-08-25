@@ -1,0 +1,12 @@
+[project]
+name = "revenue-recovery-autopilot-backend"
+version = "0.1.0"
+description = "Revenue Recovery Autopilot — FastAPI backend"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "integration: marks tests that require a live PostgreSQL database (docker compose up)",
+]
