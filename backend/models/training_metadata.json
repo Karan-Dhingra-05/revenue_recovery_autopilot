@@ -1,0 +1,23 @@
+{
+  "trained_at": "2026-08-25T20:03:22.067674+00:00",
+  "train_rows": 4359,
+  "val_rows": 934,
+  "features": [
+    "action_type",
+    "payment_method",
+    "failure_reason",
+    "failure_source",
+    "failure_pattern",
+    "created_day",
+    "amount",
+    "attempt_number",
+    "customer_success_rate",
+    "customer_previous_failures",
+    "customer_previous_recoveries",
+    "hours_since_last_success",
+    "subscription_flag",
+    "created_hour"
+  ],
+  "label": "recovered",
+  "lgbm_best_iteration": 52
+}

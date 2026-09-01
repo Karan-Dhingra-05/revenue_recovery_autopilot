@@ -17,8 +17,10 @@ class Settings(BaseSettings):
     razorpay_key_secret: str = ""
     razorpay_webhook_secret: str = ""
 
-    # LLM — populated in Phase 4
-    llm_api_key: str = ""
+    # Gemini LLM — Phase 4
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-3.6-flash"
+    gemini_timeout_seconds: int = 30
 
     model_config = SettingsConfigDict(
         env_file=".env",
