@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.health import router as health_router
+from app.api.webhooks import router as webhooks_router
 
 app = FastAPI(
     title="Revenue Recovery Autopilot",
@@ -30,3 +31,4 @@ app.add_middleware(
 
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(health_router, prefix="/api")
+app.include_router(webhooks_router, prefix="/api")

@@ -12,14 +12,15 @@ class Settings(BaseSettings):
     database_url: str = "postgresql://postgres:postgres@localhost:5432/revenue_recovery"
     redis_url: str = "redis://localhost:6379/0"
 
-    # Razorpay Test Mode — populated in Phase 2
+    # Gemini LLM — Phase 4
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-2.5-flash"
+    
+    # Razorpay Settings
     razorpay_key_id: str = ""
     razorpay_key_secret: str = ""
     razorpay_webhook_secret: str = ""
-
-    # Gemini LLM — Phase 4
-    gemini_api_key: str = ""
-    gemini_model: str = "gemini-3.6-flash"
+    razorpay_execution_enabled: bool = False
     gemini_timeout_seconds: int = 30
 
     model_config = SettingsConfigDict(

@@ -11,5 +11,6 @@ pandas==2.2.3
 scikit-learn==1.6.1
 lightgbm==4.5.0
 google-genai==1.9.0
+razorpay>=1.4.2
 pytest==8.3.4
 httpx==0.28.1

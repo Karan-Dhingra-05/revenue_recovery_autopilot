@@ -113,6 +113,7 @@ See [`.env.example`](.env.example) for the full list. Copy to `backend/.env` for
 | `RAZORPAY_KEY_ID`       | Phase 2  | Razorpay test key ID                 |
 | `RAZORPAY_KEY_SECRET`   | Phase 2  | Razorpay test key secret             |
 | `RAZORPAY_WEBHOOK_SECRET` | Phase 2 | Razorpay webhook signing secret     |
+| `RAZORPAY_EXECUTION_ENABLED`| Phase 6 | Set to `true` to allow Razorpay API execution (Defaults to false). Credentials alone never enable API execution. |
 | `LLM_API_KEY`           | Phase 4  | LLM provider API key                 |
 
 ---
@@ -145,6 +146,8 @@ pytest -v
 ## Known Limitations
 
 - Everything runs in Razorpay **Test Mode** only — no real money moves.
+- Test credentials must begin with `rzp_test_`. Live credentials (`rzp_live_`) are explicitly rejected by the application.
+- `RAZORPAY_EXECUTION_ENABLED` defaults to false. Credentials alone never enable external API execution.
 - ML model is trained on synthetic data; probabilities are directionally correct, not calibrated to any real merchant.
 - LLM output is always a proposal — the deterministic policy engine decides whether to execute.
 

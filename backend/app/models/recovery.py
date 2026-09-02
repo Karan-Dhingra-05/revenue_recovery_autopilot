@@ -142,6 +142,10 @@ class RecoveryAction(Base):
     external_reference: Mapped[Optional[str]] = mapped_column(
         String(128), nullable=True
     )
+    # Razorpay Payment Link short URL (customer-facing)
+    payment_link_url: Mapped[Optional[str]] = mapped_column(
+        String(512), nullable=True
+    )
     requested_at: Mapped[datetime] = mapped_column(
         nullable=False, server_default=func.now()
     )
